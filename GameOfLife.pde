@@ -46,17 +46,7 @@ public void draw () {
 public void keyPressed() {
   if(key == ' ') {
     running = !running;
-  if(key == 'r' || key == 'R') {
-    for(int r = 0; r < NUM_ROWS; r++) {
-      for(int c = 0; c < NUM_COLS; c++) {
-        buttons[r][c] = new Life(r, c);  
-      }
-    FPS = 6;
-    }
-    Color = color((float)Math.random() * 60, (float)Math.random() * 1 +240, (float)Math.random() *60);
-    running = false;
-  }
-  if(key == 'w' || key=='W' && FPS < 10) {
+  if(key == 'w' ) {
     FPS++;
   }
   if(key == 's'  && FPS > 4) {
